@@ -6,16 +6,20 @@ using System.Web.Mvc;
 
 namespace TimeTableBusTrain.Controllers
 {
-    public class HomeController : Controller
+    public class TimeTableController : Controller
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
 
             return View();
         }
+        
+        public ActionResult Train()
+        {
+            return View();
+        }
 
-        public ActionResult About()
+        public ActionResult Bus()
         {
             return View();
         }
