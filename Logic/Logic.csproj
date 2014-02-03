@@ -48,6 +48,7 @@
     <Compile Include="Bus.cs" />
     <Compile Include="BusFactory.cs" />
     <Compile Include="BusList.cs" />
+    <Compile Include="Creator.cs" />
     <Compile Include="IFactory.cs" />
     <Compile Include="IRouteList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
