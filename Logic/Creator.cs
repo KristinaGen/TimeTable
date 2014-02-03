@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    interface IFactory
+    class Creator
     {
-        List<Transport> createListRoute(IFactory factory);
+        public void CreateModelForBus(IFactory factory) { }
+        public void CreateModelForTrain(IFactory factory) { }
     }
 }

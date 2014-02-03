@@ -48,13 +48,14 @@
     <Compile Include="Bus.cs" />
     <Compile Include="BusFactory.cs" />
     <Compile Include="BusList.cs" />
+    <Compile Include="Creator.cs" />
     <Compile Include="IFactory.cs" />
     <Compile Include="IRouteList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Train.cs" />
     <Compile Include="TrainFactory.cs" />
     <Compile Include="TrainList.cs" />
-    <Compile Include="ITransport.cs" />
+    <Compile Include="Transport.cs" />
   </ItemGroup>
   <ItemGroup>
     <XamlAppDef Include="Activity1.xaml">
