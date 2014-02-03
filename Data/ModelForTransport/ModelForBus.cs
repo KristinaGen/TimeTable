@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logic
+namespace Data.ModelForTransport
 {
-    interface IFactory
+    public class ModelForBus:ModelForTransport
     {
-        List<Transport> createListRoute(IFactory factory);
     }
 }

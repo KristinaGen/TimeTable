@@ -16,6 +16,7 @@ namespace TimeTableBusTrain.Controllers
         
         public ActionResult Train()
         {
+            
             return View();
         }
 
