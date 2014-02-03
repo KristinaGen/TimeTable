@@ -11,15 +11,20 @@ namespace Logic
 {
    public class Model
     {
-       private IFactory f;
-       Model(IFactory factory) { f = factory; }
+       
+       private IFactory factory;
+
+       public Model(IFactory factory)
+       {
+           this.factory = factory;
+       }
        public ITransportList GetTransportList()
        {
-           return f.CreateListRoute();
+           return factory.CreateListRoute();
        }
        public List<string> GetCitiesList()
        {
-           return f.CreateListCity();
+           return factory.CreateListCity();
        }
     }
        

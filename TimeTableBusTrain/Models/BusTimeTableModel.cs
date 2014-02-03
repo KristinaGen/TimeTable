@@ -6,7 +6,7 @@ using System.Web;
 
 namespace TimeTableBusTrain.Models
 {
-    public class BusTimeTable
+    public class BusTimeTableModel
     {
         public List<String> Sities { set; get; }
         public List<Bus> Buses { set; get; }

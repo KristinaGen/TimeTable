@@ -99,8 +99,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\BusTimeTable.cs" />
-    <Compile Include="Models\TrainTimeTable.cs" />
+    <Compile Include="Models\BusTimeTableModel.cs" />
+    <Compile Include="Models\TrainTimeTableModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
