@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Data.Lists;
 
-namespace Logic
+namespace Logic.Factory
 {
    public  interface IFactory
     {
