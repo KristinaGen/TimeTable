@@ -50,6 +50,7 @@
     <Compile Include="Factory\IFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Factory\TrainFactory.cs" />
+    <Compile Include="Readers\IReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <XamlAppDef Include="Activity1.xaml">
@@ -62,6 +63,9 @@
       <Project>{f1561e39-6578-46e3-9f63-b4bb464b116b}</Project>
       <Name>Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BusTimeTable.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
