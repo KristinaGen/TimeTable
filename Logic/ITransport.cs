@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    interface ITransport
+    public abstract class Transport
     {
         public DateTime StartTime { set; get; }
         public DateTime FinishTime { set; get; }

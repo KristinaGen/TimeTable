@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    class Train : ITransport
+    class Train : Transport
     {
         public int NumberTrain { set; get; }
         public string TypeTrain { set; get; }
