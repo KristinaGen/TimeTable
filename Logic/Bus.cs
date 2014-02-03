@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    class Bus:ITransport
+    class Bus: Transport
     {
         public int NumberRoute { set; get; }
         public string BusModel { set; get; }
