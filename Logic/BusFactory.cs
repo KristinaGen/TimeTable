@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Data.Lists;
 
 namespace Logic
 {
-    class BusFactory:IFactory
+    public class BusFactory:IFactory
     {
-        public List<Transport> createListRoute(IFactory factory)
+        public ITransportList CreateListRoute()
         {
             throw new NotImplementedException();
+        }
+
+        public List<string> CreateListCity()
+        {
+            return new List<string>();
         }
     }
 }

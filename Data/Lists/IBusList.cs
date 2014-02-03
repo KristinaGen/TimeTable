@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data.ModelForTransport
+namespace Data.Lists
 {
-    public class ModelForBus:ModelForTransport
+    public class IBusList:ITransportList
     {
     }
 }

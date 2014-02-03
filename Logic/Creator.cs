@@ -1,4 +1,6 @@
 ﻿using System;
+using Data.Transports;
+using Data.Lists;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +8,18 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    class Creator
+   public class Model
     {
-        public void CreateModelForBus(IFactory factory) { }
-        public void CreateModelForTrain(IFactory factory) { }
+       private IFactory f;
+       Model(IFactory factory) { f = factory; }
+       public ITransportList GetTransportList()
+       {
+           return f.CreateListRoute();
+       }
+       public List<string> GetCitiesList()
+       {
+           return f.CreateListCity();
+       }
     }
+       
 }

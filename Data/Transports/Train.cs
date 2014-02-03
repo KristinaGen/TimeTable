@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logic
+namespace Data.Transports
 {
-    class Train : Transport
+    public class Train : Transport
     {
         public int NumberTrain { set; get; }
         public string TypeTrain { set; get; }

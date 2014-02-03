@@ -1,9 +1,9 @@
 ﻿using Data;
-using Data.Transport;
+using Data.Transports;
 
-namespace Data.Transport 
+namespace Data.Transports 
 {
-    class Bus: Transport
+    public class Bus: Transport
     {
         public int NumberRoute { set; get; }
         public string BusModel { set; get; }

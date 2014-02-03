@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Data.Lists;
 
 namespace Logic
 {
-    interface IFactory
+   public  interface IFactory
     {
-        List<Transport> createListRoute(IFactory factory);
+        ITransportList CreateListRoute();
+        List<string> CreateListCity();
     }
 }

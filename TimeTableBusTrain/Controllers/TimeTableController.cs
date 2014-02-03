@@ -1,4 +1,5 @@
 ﻿using System;
+using Logic;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,12 +17,14 @@ namespace TimeTableBusTrain.Controllers
         
         public ActionResult Train()
         {
-            
+
+            IFactory factory = new TrainFactory();
             return View();
         }
 
         public ActionResult Bus()
         {
+            IFactory factory = new BusFactory();
             return View();
         }
     }
