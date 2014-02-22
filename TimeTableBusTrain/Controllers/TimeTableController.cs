@@ -42,15 +42,18 @@ namespace TimeTableBusTrain.Controllers
 
         public ActionResult Bus()
         {
-            var busis = new List<Bus>()
-            {
-                new Bus("qwe", 1),
-                new Bus("asd", 2),
-                new Bus("zxc", 3)
-            };
+            //var busis = new List<Bus>()
+            //{
+            //    new Bus("qwe", 1),
+            //    new Bus("asd", 2),
+            //    new Bus("zxc", 3)
+            //};
+            IFactory factory = new BusFactory();
+            Creator creator = new Creator(factory);
+
             PageModel model = new PageModel();
             model.List = new List<IModel>();
-            model.List.AddRange(busis);
+            model.List.AddRange(creator.GetTransportList());
 
             return View(model);
         }

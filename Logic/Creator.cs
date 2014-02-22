@@ -13,7 +13,7 @@ namespace Logic
        {
            _factory = factory;
        }
-       public ITransportList GetTransportList()
+       public List<Transport> GetTransportList()
        {
            return _factory.CreateListRoute();
        }

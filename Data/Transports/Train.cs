@@ -10,6 +10,7 @@ namespace Data.Transports
     {
         public int NumberTrain { set; get; }
         public string TypeTrain { set; get; }
+        public Train() { }
 
         public Train(String s, int i)
         {
