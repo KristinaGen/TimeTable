@@ -8,7 +8,10 @@ namespace TimeTableBusTrain.Models
 {
     public class TrainTimeTableModel
     {
-        public List<String> Sities { set; get; }
-        public List<Train> Trains { set; get; }
+        public IEnumerable<String> Sities { set; get; }
+        public IEnumerable<Train> Trains { set; get; }
+
+        public TrainTimeTableModel(){}
+
     }
 }

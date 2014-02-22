@@ -6,10 +6,20 @@ using System.Threading.Tasks;
 
 namespace Data.Transports
 {
-    public class Train : Transport
+    public class Train : Transport, IModel
     {
         public int NumberTrain { set; get; }
         public string TypeTrain { set; get; }
 
+        public Train(String s, int i)
+        {
+            this.NumberTrain = i;
+            this.TypeTrain = s;
+        }
+
+        public void Operation()
+        {
+            
+        }
     }
 }

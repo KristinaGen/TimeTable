@@ -3,3 +3,73 @@
 }
 
 <h2>Bus</h2>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                NumberRoute
+            </th>
+            <th>
+                BusModel
+            </th>
+            <th>
+                StartTime
+            </th>
+            <th>
+                FinishTime
+            </th>
+            <th>
+                CityFrom
+            </th>
+            <th>
+                StationFrom(Platform)
+            </th>
+            <th>
+                CityTo
+            </th>
+            <th>
+                StationTo
+            </th>
+            <th>
+                Cost
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bus in Model.List)
+        {
+            <tr>
+                <td>
+                    @bus.NumberRoute
+                </td>
+                <td>
+                    @bus.BusModel
+                </td>
+                <td>
+                    @bus.StartTime
+                </td>
+                <td>
+                    @bus.FinishTime
+                </td>
+                <td>
+                    @bus.CityFrom
+                </td>
+                <td>
+                    @bus.StationFrom
+                    (@bus.Platform)
+                </td>
+                <td>
+                    @bus.CityTo
+                </td>
+                <td>
+                    @bus.StationTo
+                </td>
+                <td>
+                    @bus.Cost
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
