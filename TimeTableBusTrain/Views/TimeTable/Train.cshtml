@@ -1,6 +1,73 @@
 ﻿@{
     ViewBag.Title = "Train";
 }
-
-
 <h2>Train</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                NumberTrain
+            </th>
+            <th>
+                TypeTrain
+            </th>
+            <th>
+                StartTime
+            </th>
+            <th>
+                FinishTime
+            </th>
+            <th>
+                CityFrom
+            </th>
+            <th>
+                StationFrom(Platform)
+            </th>
+            <th>
+                CityTo
+            </th>
+            <th>
+                StationTo
+            </th>
+            <th>
+                Cost
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var train in Model.Trains)
+        {
+            <tr>
+                <td>
+                    @train.NumberTrain
+                </td>
+                <td>
+                    @train.TypeTrain
+                </td>
+                <td>
+                    @train.StartTime
+                </td>
+                <td>
+                    @train.FinishTime
+                </td>
+                <td>
+                    @train.CityFrom
+                </td>
+                <td>
+                    @train.StationFrom
+                    (@train.Platform)
+                </td>
+                <td>
+                    @train.CityTo
+                </td>
+                <td>
+                    @train.StationTo
+                </td>
+                <td>
+                    @train.Cost
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

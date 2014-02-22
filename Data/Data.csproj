@@ -50,6 +50,8 @@
     <Compile Include="Lists\ITrainList.cs" />
     <Compile Include="Transports\Bus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transports\IModel.cs" />
+    <Compile Include="Transports\PageModel.cs" />
     <Compile Include="Transports\Train.cs" />
     <Compile Include="Transports\Transport.cs" />
   </ItemGroup>

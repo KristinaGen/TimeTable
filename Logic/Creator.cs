@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-   public class Model
+   public class Creator
     {
        
        private IFactory factory;
 
-       public Model(IFactory factory)
+       public Creator(IFactory factory)
        {
            this.factory = factory;
        }
