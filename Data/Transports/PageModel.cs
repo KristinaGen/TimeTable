@@ -10,8 +10,6 @@ namespace Data.Transports
     {
         public List<IModel> List { get; set; }
 
-        public PageModel(){}
-
         public void Add(IModel m)
         {
             List.Add(m);

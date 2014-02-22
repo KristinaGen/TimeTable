@@ -11,7 +11,8 @@ namespace Logic.Readers
     {
         public List<Bus> GetListBus()
         {
-            throw new NotImplementedException();
+            
+
         }
 
         public List<Train> GetListTrain()

@@ -1,30 +1,25 @@
-﻿using System;
-using Data.Transports;
-using Data.Lists;
+﻿using Data.Lists;
 using Logic.Factory;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Logic
 {
    public class Creator
     {
        
-       private IFactory factory;
+       private readonly IFactory _factory;
 
        public Creator(IFactory factory)
        {
-           this.factory = factory;
+           _factory = factory;
        }
        public ITransportList GetTransportList()
        {
-           return factory.CreateListRoute();
+           return _factory.CreateListRoute();
        }
        public List<string> GetCitiesList()
        {
-           return factory.CreateListCity();
+           return _factory.CreateListCity();
        }
     }
        
