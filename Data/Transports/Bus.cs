@@ -9,6 +9,9 @@ namespace Data.Transports
         public int NumberRoute { set; get; }
         public string BusModel { set; get; }
 
+        public Bus()
+        {
+            }
         public Bus(String s, int i)
         {
             this.BusModel = s;

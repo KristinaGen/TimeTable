@@ -18,7 +18,7 @@ namespace Logic
        {
            this.factory = factory;
        }
-       public ITransportList GetTransportList()
+       public List<Transport> GetTransportList()
        {
            return factory.CreateListRoute();
        }
