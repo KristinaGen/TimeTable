@@ -16,18 +16,18 @@ namespace TimeTableBusTrain.Controllers
         public ActionResult Index()
         {
             var creator = new Creator(new BusFactory());
-            var list = creator.GetCitiesToList();
+            var list = creator.GetTransportList();
             var model = new Dictionary<string, int>();    
             foreach (var item in list)
             {
                 int value;
-                if (model.TryGetValue(item, out value))
+                if (model.TryGetValue(item.CityTo, out value))
                 {
-                    model[item]++;
+                    model[item.CityTo] += item.DaysOfWeek.Count;
                 }
                 else
                 {
-                    model[item] = 1;
+                    model[item.CityTo] = item.DaysOfWeek.Count;
                 }
             }
             return View(model);

@@ -18,12 +18,12 @@ namespace Logic.Factory
 
         public List<string> CreateListCityTo()
         {
-            return FromFile.GetInstance().Transports.Where(x => x is Bus).Select(x => x.CityTo).ToList();
+            return FromFile.GetInstance().Transports.Where(x => x is Bus).Select(x => x.CityTo).Distinct().ToList();
         }
 
         public List<string> CreateListCityFrom()
         {
-            return FromFile.GetInstance().Transports.Where(x => x is Bus).Select(x => x.CityFrom).ToList();
+            return FromFile.GetInstance().Transports.Where(x => x is Bus).Select(x => x.CityFrom).Distinct().ToList();
         }
     }
 }

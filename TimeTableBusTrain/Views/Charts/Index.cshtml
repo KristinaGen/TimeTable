@@ -1,17 +1,13 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
-<style>
-    .jqplot-table-legend-swatch {
-        width: 20px;
-        height: 20px;
-    }
-</style>
+
 
 <h2>Index</h2>
 <script>
     $(document).ready(function (){
         var data = [];
+        var data2 = [];
 
         @foreach (var item in Model)
         {
@@ -20,25 +16,52 @@
                 "@item.Key",
                 @item.Value
             ]);
-            </text>
+        data2.push([
+                "@item.Key",
+                100 - @item.Value
+        ]);
+        </text>
         }
 
-        $.jqplot('myChartCircle', [data],
+        $.jqplot('myChartCircleBus', [data],
         {
             seriesDefaults: {
                 // Make this a pie chart.
                 renderer: jQuery.jqplot.PieRenderer,
                 rendererOptions: {
-                    // Put data labels on the pie slices.
-                    // By default, labels show the percentage of the slice.
-                    showDataLabels: true
+                    // Donut's can be cut into slices like pies.
+                    sliceMargin: 3,
+                    // Pies and donuts can start at any arbitrary angle.
+                    startAngle: -90,
+                    showDataLabels: true,
+                    // By default, data labels show the percentage of the donut/pie.
+                    // You can show the data 'value' or data 'label' instead.
+                    dataLabels: 'percent'
+                }
+            },
+            legend: { show: true, location: 'e' }
+        });
+        $.jqplot('myChartCircleTrain', [data2],
+        {
+            seriesDefaults: {
+                // Make this a pie chart.
+                renderer: jQuery.jqplot.PieRenderer,
+                rendererOptions: {
+                    // Donut's can be cut into slices like pies.
+                    sliceMargin: 3,
+                    // Pies and donuts can start at any arbitrary angle.
+                    startAngle: -90,
+                    showDataLabels: true,
+                    // By default, data labels show the percentage of the donut/pie.
+                    // You can show the data 'value' or data 'label' instead.
+                    dataLabels: 'percent'
                 }
             },
             legend: { show: true, location: 'e' }
         });
 
         $.jqplot('myChartLinear', [data], {
-            title: 'Concern vs. Occurrance',
+            title: 'Число маршрутов в город',
             series: [{ renderer: $.jqplot.BarRenderer }],
             axesDefaults: {
                 tickRenderer: $.jqplot.CanvasAxisTickRenderer,
@@ -55,5 +78,6 @@
         });
     })
 </script>
-<div id="myChartCircle"></div>
+<div id="myChartCircleBus" style="width: 49%; display: inline-block"></div>
+<div id="myChartCircleTrain" style="width: 49%; display: inline-block"></div>
 <div id="myChartLinear"></div>
