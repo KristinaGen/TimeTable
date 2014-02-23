@@ -1,8 +1,19 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Bus";
 }
 
 <h2>Bus</h2>
+
+
+
+
+<select name="menu" size="1">
+    @foreach (var city in Model.List[1].List)
+    {
+         <option value="@city">@city</option>
+    }
+</select>
 
 
 <table>
@@ -19,6 +30,9 @@
             </th>
             <th>
                 FinishTime
+            </th>
+            <th>
+                DaysOfWeek
             </th>
             <th>
                 CityFrom
@@ -38,7 +52,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var bus in Model.List)
+        @foreach (var bus in Model.List[0].List)
         {
             <tr>
                 <td>
@@ -52,6 +66,14 @@
                 </td>
                 <td>
                     @bus.FinishTime
+                </td>
+                <td>
+                    @foreach (var day in bus.DaysOfWeek)
+                    {
+                        <text>
+                            @(day),
+                        </text>
+                    }
                 </td>
                 <td>
                     @bus.CityFrom

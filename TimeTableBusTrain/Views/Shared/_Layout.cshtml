@@ -4,6 +4,9 @@
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
     <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.jqplot.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jqplot.pieRenderer.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jqplot.donutRenderer.min.js")" type="text/javascript"></script>
 </head>
 <body>
     <div class="page">
@@ -19,6 +22,7 @@
                     <li>@Html.ActionLink("Главная", "Index", "TimeTable")</li>
                     <li>@Html.ActionLink("Автобусы", "Bus", "TimeTable")</li>
                     <li>@Html.ActionLink("Поезда", "Train", "TimeTable")</li>
+                    <li>@Html.ActionLink("Графики", "Index", "Charts")</li>
                 </ul>
             </div>
         </div>

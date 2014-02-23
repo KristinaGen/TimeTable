@@ -9,7 +9,6 @@ namespace Logic.Readers
 {
     public interface IReader
     {
-        List<Bus> GetListBus(); 
-        List<Train> GetListTrain();
+        List<Transport> GetListTransport();
     }
 }

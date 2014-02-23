@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<transports>
+  <bus>
+        <NumberRoute>123</NumberRoute>
+        <BusModel>Мягкий</BusModel>
+        <StartTime>17.00</StartTime>
+        <FinishTime>19.30</FinishTime>
+        <CityFrom>Минск</CityFrom>
+        <CityTo>Орша</CityTo>
+        <Platform>4</Platform>
+        <StationFrom>Оршанский центральный вакзвл</StationFrom>
+        <StationTo>Минский центральный вакзал</StationTo>
+        <Cost>50400</Cost>
+        <DaysOfWeek>
+          <days name ="sunday"/>
+          <days name ="monday"/>
+          <days name ="tuesday"/>
+          <days name ="whensday"/>
+          <days name ="thusday"/>
+          <days name ="friday"/>
+          <days name ="saturday"/>
+        </DaysOfWeek>
+  </bus>
+  <bus>
+    <NumberRoute>123</NumberRoute>
+    <BusModel>Мягкий</BusModel>
+        <StartTime>12.00</StartTime>
+        <FinishTime>16.30</FinishTime>
+        <CityFrom>Минск</CityFrom>
+        <CityTo>Гомель</CityTo>
+        <Platform>6</Platform>
+        <StationFrom>Гомельский центральный вакзвл</StationFrom>
+        <StationTo>Минский центральный вакзал</StationTo>
+        <Cost>150400</Cost>
+        <DaysOfWeek>
+          <days name ="sunday"/>
+          <days name ="saturday"/>
+        </DaysOfWeek>
+  </bus>
+  <bus>
+    <NumberRoute>123</NumberRoute>
+    <BusModel>Мягкий</BusModel>
+        <StartTime>11.00</StartTime>
+        <FinishTime>13.30</FinishTime>
+        <CityFrom>Минск</CityFrom>
+        <CityTo>Орша</CityTo>
+        <Platform>4</Platform>
+        <StationFrom>Оршанский центральный вакзвл</StationFrom>
+        <StationTo>Минский центральный вакзал</StationTo>
+        <Cost>53400</Cost>
+        <DaysOfWeek>
+          <days name ="sunday"/>
+          <days name ="saturday"/>
+        </DaysOfWeek>
+  </bus>
+  <bus>
+    <NumberRoute>123</NumberRoute>
+    <BusModel>Мягкий</BusModel>
+        <StartTime>17.00</StartTime>
+        <FinishTime>19.30</FinishTime>
+        <CityFrom>Орша</CityFrom>
+        <CityTo>Минск</CityTo>
+        <Platform>4</Platform>
+        <StationFrom>Минский центральный вакзвл</StationFrom>
+        <StationTo>Оршанский центральный вакзал</StationTo>
+        <Cost>45400</Cost>
+        <DaysOfWeek>
+          <days name ="sunday"/>
+          <days name ="monday"/>
+          <days name ="tuesday"/>
+          <days name ="whensday"/>
+          <days name ="thusday"/>
+          <days name ="friday"/>
+          <days name ="saturday"/>
+        </DaysOfWeek>
+  </bus>
+  <train>
+    <NumberTrain>111</NumberTrain>
+    <TypeTrain>экспресс</TypeTrain>
+        <StartTime>15.00</StartTime>
+        <FinishTime>17.00</FinishTime>
+        <CityFrom>Минск</CityFrom>
+        <CityTo>Воложин</CityTo>
+        <Platform>2</Platform>
+        <StationFrom>Минский центральный вакзвл</StationFrom>
+        <StationTo>Воложинский автовакзал</StationTo>
+        <Cost>25300</Cost>
+        <DaysOfWeek>
+          <days name ="sunday"/>
+          <days name ="monday"/>
+          <days name ="thusday"/>
+          <days name ="friday"/>
+          <days name ="saturday"/>
+        </DaysOfWeek>
+  </train>
+  <train>
+    <NumberTrain>111</NumberTrain>
+    <TypeTrain>экспресс</TypeTrain>
+    <StartTime>15.00</StartTime>
+    <FinishTime>17.00</FinishTime>
+    <CityFrom>Минск</CityFrom>
+    <CityTo>Воложин</CityTo>
+    <Platform>2</Platform>
+    <StationFrom>Минский центральный вакзвл</StationFrom>
+    <StationTo>Воложинский автовакзал</StationTo>
+    <Cost>25300</Cost>
+    <DaysOfWeek>
+      <days name ="sunday"/>
+      <days name ="monday"/>
+      <days name ="saturday"/>
+    </DaysOfWeek>
+  </train>
+  <train>
+    <NumberTrain>111</NumberTrain>
+    <TypeTrain>экспресс</TypeTrain>
+    <StartTime>15.00</StartTime>
+    <FinishTime>17.00</FinishTime>
+    <CityFrom>Минск</CityFrom>
+    <CityTo>Воложин</CityTo>
+    <Platform>2</Platform>
+    <StationFrom>Минский центральный вакзвл</StationFrom>
+    <StationTo>Воложинский автовакзал</StationTo>
+    <Cost>25300</Cost>
+    <DaysOfWeek>
+      <days name ="sunday"/>
+      <days name ="tuesday"/>
+      <days name ="whensday"/>
+      <days name ="saturday"/>
+    </DaysOfWeek>
+  </train>
+  <bus>
+    <NumberRoute>123</NumberRoute>
+    <BusModel>Мягкий</BusModel>
+    <StartTime>15.00</StartTime>
+    <FinishTime>17.00</FinishTime>
+    <CityFrom>Минск</CityFrom>
+    <CityTo>Воложин</CityTo>
+    <Platform>2</Platform>
+    <StationFrom>Минский центральный вакзвл</StationFrom>
+    <StationTo>Воложинский автовакзал</StationTo>
+    <Cost>25300</Cost>
+    <DaysOfWeek>
+      <days name ="sunday"/>
+      <days name ="monday"/>
+      <days name ="tuesday"/>
+      <days name ="whensday"/>
+      <days name ="thusday"/>
+      <days name ="friday"/>
+      <days name ="saturday"/>
+    </DaysOfWeek>
+  </bus>
+</transports>

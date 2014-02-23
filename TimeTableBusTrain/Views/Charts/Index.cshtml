@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<style>
+    .jqplot-table-legend-swatch {
+        width: 20px;
+        height: 20px;
+    }
+</style>
+
+<h2>Index</h2>
+<script>
+    $(document).ready(function (){
+        var data = [];
+
+        @foreach (var item in Model)
+        {
+            <text>
+            data.push([
+                "@item.Key",
+                @item.Value
+            ]);
+            </text>
+        }
+
+        $.jqplot('myChartCircle', [data],
+        {
+            seriesDefaults: {
+                // Make this a pie chart.
+                renderer: jQuery.jqplot.PieRenderer,
+                rendererOptions: {
+                    // Put data labels on the pie slices.
+                    // By default, labels show the percentage of the slice.
+                    showDataLabels: true
+                }
+            },
+            legend: { show: true, location: 'e' }
+        });
+
+        $.jqplot('myChartLinear', [data], {
+            title: 'Sine Data Renderer',
+            dataRenderer: data
+        });
+    })
+</script>
+<div id="myChartCircle"></div>
+<div id="myChartLinear"></div>

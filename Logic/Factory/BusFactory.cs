@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Data.Lists;
 using Data.Transports;
 using Logic.Readers;
 
@@ -11,15 +10,20 @@ namespace Logic.Factory
 {
     public class BusFactory:IFactory
     {
+
         public List<Transport> CreateListRoute()
         {
-            IReader read = new ReaderFromXml();
-            return read.GetListBus().ConvertAll(x => (Transport)x).ToList();
+            return FromFile.GetInstance().Transports.Where(x => x is Bus).ToList();
         }
 
-        public List<string> CreateListCity()
+        public List<string> CreateListCityTo()
         {
-            return new List<string>();
+            return FromFile.GetInstance().Transports.Where(x => x is Bus).Select(x => x.CityTo).ToList();
+        }
+
+        public List<string> CreateListCityFrom()
+        {
+            return FromFile.GetInstance().Transports.Where(x => x is Bus).Select(x => x.CityFrom).ToList();
         }
     }
 }

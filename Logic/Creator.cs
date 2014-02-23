@@ -1,4 +1,5 @@
-﻿using Data.Lists;
+﻿
+using Data.Transports;
 using Logic.Factory;
 using System.Collections.Generic;
 
@@ -17,9 +18,13 @@ namespace Logic
        {
            return _factory.CreateListRoute();
        }
-       public List<string> GetCitiesList()
+       public List<string> GetCitiesToList()
        {
-           return _factory.CreateListCity();
+           return _factory.CreateListCityTo();
+       }
+       public List<string> GetCitiesFromList()
+       {
+           return _factory.CreateListCityFrom();
        }
     }
        

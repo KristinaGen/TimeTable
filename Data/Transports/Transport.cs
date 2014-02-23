@@ -16,7 +16,7 @@ namespace Data.Transports
         public string StationFrom { set; get; }
         public string StationTo { set; get; }
         public int Cost { set; get; }
-        public List<string> daysOfWeek { set; get; }
+        public List<string> DaysOfWeek { set; get; }
 
 
 

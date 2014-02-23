@@ -10,6 +10,11 @@ namespace Data.Transports
     {
         public List<IModel> List { get; set; }
 
+        public PageModel()
+        {
+            List = new List<IModel>();
+        }
+
         public void Add(IModel m)
         {
             List.Add(m);
@@ -18,6 +23,11 @@ namespace Data.Transports
         public void Remove(IModel m)
         {
             List.Remove(m);
+        }
+
+        public IModel GetChild(int i)
+        {
+            return List[i];
         }
 
         public void Operation()
