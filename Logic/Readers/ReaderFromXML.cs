@@ -12,7 +12,7 @@ namespace Logic.Readers
     {
         public List<Bus> GetListBus()
         {
-            XDocument document = XDocument.Load("D:\\Projects\\TimeTable\\Logic\\BusTimeTable.xml");
+            XDocument document = XDocument.Load(@"D:\project\TimeTable\Logic\BusTimeTable.xml");
             return document.Element("buses").Elements().Select(x => new Bus()
             {
                 StartTime = (x.Element("StartTime").Value),
@@ -29,7 +29,7 @@ namespace Logic.Readers
 
         public List<Train> GetListTrain()
         {
-            XDocument document = XDocument.Load("BusTimeTable.xml");
+            XDocument document = XDocument.Load(@"D:\project\TimeTable\Logic\BusTimeTable.xml");
             return (from item in document.Element("buses").Elements()
                     select new Train()
                     {
@@ -48,9 +48,9 @@ namespace Logic.Readers
 
         public List<Transport> GetListTransport()
         {
-            XDocument document = XDocument.Load("D:\\Projects\\TimeTable\\Logic\\TransportTimeTable.xml");
+            XDocument document = XDocument.Load(@"D:\project\TimeTable\Logic\TransportTimeTable.xml");
 
-            return document.Element("transports").Elements().Select(x => x.Name == "bus" ? (Transport) new Bus()
+            return document.Element("transports").Elements().Select(x => x.Name == "bus" ? new Bus()
             {
                 BusModel = x.Element("BusModel").Value,
                 NumberRoute = Int32.Parse(x.Element("NumberRoute").Value),
