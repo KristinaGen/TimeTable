@@ -75,7 +75,7 @@ namespace Logic.Readers
                 StationFrom = x.Element("StationFrom").Value,
                 StationTo = x.Element("StationTo").Value,
                 Cost = Int32.Parse(x.Element("Cost").Value),
-                DaysOfWeek = x.Element("DaysOfWeek").Elements().Select(c => (string)c).ToList()
+                DaysOfWeek = x.Element("DaysOfWeek").Elements().Select(c => (string)c.Attribute("name").Value).ToList()
             }).ToList();
         }
     }

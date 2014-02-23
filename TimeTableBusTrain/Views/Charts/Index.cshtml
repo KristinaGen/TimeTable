@@ -38,8 +38,20 @@
         });
 
         $.jqplot('myChartLinear', [data], {
-            title: 'Sine Data Renderer',
-            dataRenderer: data
+            title: 'Concern vs. Occurrance',
+            series: [{ renderer: $.jqplot.BarRenderer }],
+            axesDefaults: {
+                tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+                tickOptions: {
+                    angle: -30,
+                    fontSize: '10pt'
+                }
+            },
+            axes: {
+                xaxis: {
+                    renderer: $.jqplot.CategoryAxisRenderer
+                }
+            }
         });
     })
 </script>

@@ -162,6 +162,11 @@
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\Chart.js" />
+    <Content Include="Scripts\jqplot.barRenderer.min.js" />
+    <Content Include="Scripts\jqplot.canvasAxisTickRenderer.min.js" />
+    <Content Include="Scripts\jqplot.canvasTextRenderer.min.js" />
+    <Content Include="Scripts\jqplot.categoryAxisRenderer.min.js" />
+    <Content Include="Scripts\jqplot.dateAxisRenderer.min.js" />
     <Content Include="Scripts\jqplot.donutRenderer.min.js" />
     <Content Include="Scripts\jqplot.pieRenderer.min.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
