@@ -1,97 +1,176 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Bus";
 }
 
 <h2>Bus</h2>
 
+<script>
+    $(document).ready(function (){
+        var data = [];
 
-
-
-<select name="menu" size="1">
-    @foreach (var city in Model.List[1].List)
-    {
-         <option value="@city">@city</option>
-    }
-</select>
-
-
-<table>
-    <thead>
-        <tr>
-            <th>
-                NumberRoute
-            </th>
-            <th>
-                BusModel
-            </th>
-            <th>
-                StartTime
-            </th>
-            <th>
-                FinishTime
-            </th>
-            <th>
-                DaysOfWeek
-            </th>
-            <th>
-                CityFrom
-            </th>
-            <th>
-                StationFrom(Platform)
-            </th>
-            <th>
-                CityTo
-            </th>
-            <th>
-                StationTo
-            </th>
-            <th>
-                Cost
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var bus in Model.List[0].List)
+        @foreach (var item in Model.List[2].List)
         {
-            <tr>
-                <td>
-                    @bus.NumberRoute
-                </td>
-                <td>
-                    @bus.BusModel
-                </td>
-                <td>
-                    @bus.StartTime
-                </td>
-                <td>
-                    @bus.FinishTime
-                </td>
-                <td>
-                    @foreach (var day in bus.DaysOfWeek)
-                    {
-                        <text>
-                            @(day),
-                        </text>
-                    }
-                </td>
-                <td>
-                    @bus.CityFrom
-                </td>
-                <td>
-                    @bus.StationFrom
-                    (@bus.Platform)
-                </td>
-                <td>
-                    @bus.CityTo
-                </td>
-                <td>
-                    @bus.StationTo
-                </td>
-                <td>
-                    @bus.Cost
-                </td>
-            </tr>
+            <text>
+            data.push([
+                "@item.Key",
+                @item.Value
+            ]);
+        </text>
         }
-    </tbody>
-</table>
+
+        $.jqplot('myChartCircleBus', [data],
+        {
+            seriesDefaults: {
+                // Make this a pie chart.
+                renderer: jQuery.jqplot.PieRenderer,
+                rendererOptions: {
+                    // Donut's can be cut into slices like pies.
+                    sliceMargin: 3,
+                    // Pies and donuts can start at any arbitrary angle.
+                    startAngle: -90,
+                    showDataLabels: true,
+                    // By default, data labels show the percentage of the donut/pie.
+                    // You can show the data 'value' or data 'label' instead.
+                    dataLabels: 'percent'
+                }
+            },
+            legend: { show: true, location: 'e' }
+        });
+    })
+</script>
+
+
+<form action="@Url.Action("Bus")">
+    <div id="myChartCircleBus" style="width: 49%; display: inline-block"></div>
+    <table style="width: 50%; display: inline-block;">
+        <thead>
+            <tr>
+                <th colspan="2">
+                    Фильтры:
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td style="width: 50%">CityTo</td>
+            <td style="width: 50%">
+                <select name="CityTo">
+                    <option value="">Не выбран</option>
+                    @foreach (var city in Model.List[1].List)
+                    {
+                        <option value="@city" @if (Request.Params.Get("CityTo") != null && Request.Params.Get("CityTo").Equals(city)) 
+                                              {<text>selected="selected"</text>}> @city</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>CityFrom</td>
+            <td>
+                <select name="CityFrom">
+                    <option value="">Не выбран</option>
+                    @foreach (var city in Model.List[3].List)
+                    {
+                        <option value="@city" @if (Request.Params.Get("CityFrom") != null && Request.Params.Get("CityFrom").Equals(city))
+                                              {<text>selected="selected"</text>}> @city</option>
+                    }
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>OnlyHolidays</td>
+            <td>
+                <input type="checkbox" name="OnlyHolidays" value="checked" @if (Request.Params.Get("OnlyHolidays") != null && Request.Params.Get("OnlyHolidays").Equals("checked"))
+                                                                           {<text>checked="checked"</text>}/>
+            </td>
+        </tr>
+            </tbody>
+    </table>
+    <table id="with_filter">
+        <thead>
+            <tr>
+                <th>
+                    #
+                </th>
+                <th>
+                    NumberRoute
+                </th>
+                <th>
+                    BusModel
+                </th>
+                <th>
+                    StartTime
+                </th>
+                <th>
+                    FinishTime
+                </th>
+                <th>
+                    DaysOfWeek
+                </th>
+                <th>
+                    CityFrom
+                </th>
+                <th>
+                    StationFrom(Platform)
+                </th>
+                <th>
+                    CityTo
+                </th>
+                <th>
+                    StationTo
+                </th>
+                <th>
+                    Cost
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var bus in Model.List[0].List)
+            {
+                <tr>
+                    <td>
+                        <input type="checkbox" name="selected[]" value="@bus.NumberRoute" />
+                    </td>
+                    <td>
+                        @bus.NumberRoute
+                    </td>
+                    <td>
+                        @bus.BusModel
+                    </td>
+                    <td>
+                        @bus.StartTime
+                    </td>
+                    <td>
+                        @bus.FinishTime
+                    </td>
+                    <td>
+                        @foreach (var day in bus.DaysOfWeek)
+                        {
+                            <text>
+                                @(day),
+                            </text>
+                        }
+                    </td>
+                    <td>
+                        @bus.CityFrom
+                    </td>
+                    <td>
+                        @bus.StationFrom
+                        (@bus.Platform)
+                    </td>
+                    <td>
+                        @bus.CityTo
+                    </td>
+                    <td>
+                        @bus.StationTo
+                    </td>
+                    <td>
+                        @bus.Cost
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <input type="submit" />
+<button onclick="window.location.href='@Request.Path';return false;" style="font-size: 1.2em;padding: 5px;">Очистить</button>
+</form>

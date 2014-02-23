@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Data.Transports
 {
-    public class SityList:IModel
+    public class CityList:IModel
     {
         public List<String> List { set; get; }
 
-        public SityList()
+        public CityList()
         {
             List = new List<string>();
         }

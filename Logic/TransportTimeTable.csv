@@ -1,0 +1,11 @@
+﻿type;starttime;finishtime;cityFrom;Cityto;platform;stationFrom;stationto;cost;daysofweek;typetrain/busModel;numbertrain/numberroute
+bus;12.12;13.12;Минск;Гомель;1;Минский Центральный Вокзал;Гомельский Центральный Вокзал;104000;sunday|monday|tuesday|whensday|thusday|friday|saturday;Мягкий;123
+bus;13.44;13.45;Минск;Гомель;2;Минский Центральный Вокзал;Гомельский Центральный Вокзал;23000;sunday|monday|tuesday|whensday|thusday|friday|saturday;Мягкий;234
+bus;23.43;03.23;Минск;Брест;3;Минский Центральный Вокзал;Брестский Центальный Вокзал;56000;sunday|monday|tuesday|whensday|thusday|friday|saturday;Эксплесс;345
+bus;11.34;13.11;Брест;Гомель;4;Брестский Центальный Вокзал;Гомельский Центральный Вокзал;34000;sunday|monday|Tuesday;Эксплесс;456
+bus;22.33;00.22;Брест;Минск;5;Брестский Центальный Вокзал;Минский Центральный Вокзал;65000;monday|tuesday|whensday|thusday|Friday;Мягкий;654
+train;21.00;23.21;Минск;Жодино;6;Минский Центральный Вокзал;Жодинский Центральный Вокзал;34000;sunday|tuesday|thusday|friday|saturday;Электричка;543
+train;11.00;13.11;Минск;Гомель;7;Минский Центральный Вокзал;Гомельский Центральный Вокзал;54000;monday|tuesday|whensday|thusday|Friday;Экспресс;321
+train;09.00;13.09;Минск;Брест;8;Минский Центральный Вокзал;Брестский Центальный Вокзал;38000;sunday|monday|Tuesday;Дизель;111
+train;08.30;13.08;Брест;Гомель;9;Брестский Центальный Вокзал;Гомельский Центральный Вокзал;45000;sunday|monday|saturday;Электричка;222
+train;03.45;06.03;Жодино;Минск;10;Жодинский Центральный Вокзал;Минский Центральный Вокзал;98000;sunday|saturday;Экспресс;333

@@ -12,7 +12,7 @@ namespace Logic
 
         private FromFile()
         {
-            IReader reader = new ReaderFromXml();
+            IReader reader = new ReaderFromCsv();//Xml
             Transports = reader.GetListTransport();
         }
 
